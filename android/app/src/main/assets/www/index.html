@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#030712">
+    <title>C.H.U.C.K. AI</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="app">
+        <header class="header">
+            <div class="logo">C</div>
+            <div class="brand">
+                <h1>C.H.U.C.K.</h1>
+                <p>WILDCODE INTELLIGENCE</p>
+            </div>
+            <span id="status">READY</span>
+        </header>
+
+        <section class="welcome">
+            <div class="orb"><span>C</span></div>
+            <p class="eyebrow">PERSONAL AI ASSISTANT</p>
+            <h2>At your command, Boss.</h2>
+            <p class="muted">What are we working on today?</p>
+        </section>
+
+        <section id="chat" class="chat" aria-live="polite">
+            <div class="message bot">
+                C.H.U.C.K. systems ready. Send a message to begin.
+            </div>
+        </section>
+
+        <form id="messageForm" class="composer">
+            <input
+                id="message"
+                type="text"
+                placeholder="Message C.H.U.C.K...."
+                autocomplete="off"
+                required>
+            <button id="sendButton" type="submit">SEND</button>
+        </form>
+
+        <footer>WILDCODE SYSTEMS · C.H.U.C.K. AI</footer>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
