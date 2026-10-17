@@ -48,7 +48,7 @@ class MainActivity : Activity() {
 
                 try {
                     val connection = URL(
-                        "https://c-h-u-c-k4-0-2.onrender.com/ask"
+                        "https://chuck-ai-backend.onrender.com/ask"
                     ).openConnection() as HttpURLConnection
 
                     connection.requestMethod = "POST"
