@@ -1,50 +1,98 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#030712">
-    <title>C.H.U.C.K. AI</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#020611">
+  <title>C.H.U.C.K. | ELHAM STUDIOS</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
-    <main class="app">
-        <header class="header">
-            <div class="logo">C</div>
-            <div class="brand">
-                <h1>C.H.U.C.K.</h1>
-                <p>WILDCODE INTELLIGENCE</p>
-            </div>
-            <span id="status">READY</span>
-        </header>
+  <div class="space">
+    <div class="grid"></div>
+    <div class="ambient"></div>
+    <div id="stars"></div>
+  </div>
 
-        <section class="welcome">
-            <div class="orb"><span>C</span></div>
-            <p class="eyebrow">PERSONAL AI ASSISTANT</p>
-            <h2>At your command, Boss.</h2>
-            <p class="muted">What are we working on today?</p>
-        </section>
+  <header class="topbar">
+    <div>
+      <div class="logo">C<span>.</span>H<span>.</span>U<span>.</span>C<span>.</span>K</div>
+      <div class="subtitle">ELHAM STUDIOS · AI COMMAND SYSTEM</div>
+    </div>
+    <div class="connection">
+      <span class="dot" id="statusDot"></span>
+      <span id="statusText">CORE ONLINE</span>
+    </div>
+  </header>
 
-        <section id="chat" class="chat" aria-live="polite">
-            <div class="message bot">
-                C.H.U.C.K. systems ready. Send a message to begin.
-            </div>
-        </section>
+  <main>
+    <section class="orb-zone">
+      <div class="orb-stage" id="orbStage">
+        <div class="halo"></div>
+        <div class="ring ring-c"></div>
+        <div class="ring ring-a"></div>
+        <div class="planet"></div>
+        <div class="ring ring-b"></div>
+        <div class="ring ring-d"></div>
+      </div>
 
-        <form id="messageForm" class="composer">
-            <input
-                id="message"
-                type="text"
-                placeholder="Message C.H.U.C.K...."
-                autocomplete="off"
-                required>
-            <button id="sendButton" type="submit">SEND</button>
-        </form>
+      <div class="core-info">
+        <div class="core-title">C.H.U.C.K.</div>
+        <div class="core-status" id="coreStatus">AWAITING COMMAND</div>
+        <div class="core-line"></div>
+      </div>
+    </section>
 
-        <footer>WILDCODE SYSTEMS · C.H.U.C.K. AI</footer>
-    </main>
+    <section class="chat-feed" id="messages" aria-live="polite">
+      <div class="message">
+        <span class="msg-label">C.H.U.C.K. / CORE</span>
+        <div>Systems initialized, Boss Wayne. Awaiting your command.</div>
+      </div>
+    </section>
+  </main>
 
-    <script src="script.js"></script>
+  <section class="bottom">
+    <div class="bottom-inner">
+      <div class="command-label">
+        <span>COMMAND INPUT</span>
+        <strong id="aiStatus">AI STANDBY</strong>
+      </div>
+
+      <form class="input-row" id="chatForm">
+        <div class="input-wrap">
+          <input
+            id="userInput"
+            type="text"
+            placeholder="Talk to C.H.U.C.K., Boss..."
+            autocomplete="off"
+            enterkeyhint="send"
+            aria-label="Enter your command"
+          >
+        </div>
+        <button class="btn" type="button" id="micBtn"
+          aria-label="Record voice command">🎙</button>
+        <button class="btn send" type="submit"
+          aria-label="Send command">➤</button>
+      </form>
+
+      <div class="tools-row">
+        <button class="tool" id="wakeBtn" type="button">
+          <span>◉</span><span id="wakeLabel">WAKE WORD OFF</span>
+        </button>
+        <button class="tool active" id="voiceBtn" type="button">
+          <span>♫</span><span id="voiceLabel">VOICE ON</span>
+        </button>
+        <button class="tool" id="clearBtn" type="button">
+          <span>⌫</span><span>CLEAR CHAT</span>
+        </button>
+      </div>
+
+      <div class="footer">
+        POWERED BY <span>ELHAM STUDIOS</span> · C.H.U.C.K. CORE
+      </div>
+    </div>
+  </section>
 </body>
 </html>
